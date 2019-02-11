@@ -1,0 +1,104 @@
+<!-- titulo separado -->
+<!-- <ion-row *ngIf="mostrarInformacao">
+  <ion-col width-12>
+    <ion-row item-right (click)="show()">
+      <ion-col col-11>
+          <ion-row>
+              <ion-col col-6>
+                <p>
+                  <small>{{text}}</small><br>
+                  <strong>Oftalmologia</strong>
+                </p>
+              </ion-col>
+              <ion-col col-6>
+                <p>
+                  <small>{{text}}</small><br>
+                  <strong>H25 - Catarata senil</strong>
+                </p>
+              </ion-col>
+            </ion-row>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name='ios-arrow-down' class=""></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row> -->
+
+<!-- <ion-row >
+  <ion-col col-12>
+    <ion-row item-right (click)="show()">
+      <ion-col col-1 margin-top >
+        <h2>06</h2>
+        <p>JUL</p>
+        <p>2019</p>
+        <span class="timeline"></span>
+      </ion-col>
+      <ion-col col-10>
+        <ion-col col-11>
+          <ion-row>
+            <ion-col col-11>
+              <p>
+                <small>{{text}}</small><br>
+                <strong>2081234111</strong>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>
+              <p>
+                <small>Especialidade</small><br>
+                <strong>Oftalmologia</strong>
+              </p>
+            </ion-col>
+            <ion-col col-6>
+              <p>
+                <small>CID relacionada</small><br>
+                <strong>H25 - Catarata senil</strong>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p>
+                <small>Procedimento</small><br>
+                <strong>x0405050372 - Facoemulsificação c/ implante de lente intraocular dobrável</strong>
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon name='ios-arrow-down' class=""></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row> -->
+<ion-content padding>
+
+    <ion-list lines>
+        <ion-item *ngFor="let item of [1,2]" id="valida"
+          (click)="show()">
+          <span class="circle"></span>
+          <h2 class="tituloUm">Catarata Senil</h2>
+          <p class="tituloDois"><small>Cirurgia</small></p>
+          <p class="tituloDois"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellat
+              assumenda
+              delectus omnis iste temporibus, porro consequatur totam inventore odit veritatis, cupiditate qui
+              soluta sunt libero voluptatem deleniti illum dignissimos.</small></p>
+          <ion-avatar item-right text-right>
+            <p
+              [ngClass]="{'aguardaMedico':prioridades=='aguardaMedico', 'statusAcolhido': prioridades=='statusAcolhido', 'concluido' : prioridades=='concluido',  'encerrado' :  prioridades=='encerrado' }">
+              Em validação</p>
+            <p><small>Criado em 19/12/2018</small></p>
+            <p><small>versão 3</small></p>
+          </ion-avatar>
+          <ion-avatar item-right text-center class="popoverMore">
+            <button ion-button color='default'>
+              <ion-icon name='md-more'></ion-icon>
+            </button>
+          </ion-avatar>
+        </ion-item>
+      </ion-list>
+           
+</ion-content>

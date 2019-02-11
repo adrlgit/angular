@@ -1,0 +1,77 @@
+<h4>*ngIf</h4>
+
+<ion-row *ngIf="mostrarCursos">
+    Lista aqui.
+</ion-row>
+<ion-row *ngIf="!mostrarCursos">
+    <ion-col col-12>
+        <h2>Não mostra curso.</h2>
+    </ion-col>
+</ion-row>
+<ion-avatar item-right text-center class="popoverMore">
+    <button (click)="start()" ion-button icon-only>
+        <ion-icon name="md-more"></ion-icon>
+    </button>
+</ion-avatar>
+
+<h5><strong>Hiden</strong></h5>
+
+<ion-row [hidden]="!mostrarCursos">
+    Lista aqui.
+</ion-row>
+<ion-row [hidden]="mostrarCursos">
+    <ion-col col-12>
+        <h2>Não mostra curso.</h2>
+    </ion-col>
+</ion-row>
+
+<!-- para validacao -->
+
+<!-- para mudar a cor -->
+
+<!-- <ion-row>
+    <ion-item>
+        <ion-label floating>login</ion-label>
+        <ion-input type="text"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+        <ion-label floating>informe senha</ion-label>
+        <ion-input type="password"></ion-input>
+    </ion-item>
+    <small [hidden]="!validacao" class="danger">*É preciso saber viver...</small>
+    <small [hidden]="validacao" class="blue">*Bagulho é doido...</small>
+</ion-row>
+<button float-right ion-button (click)="logar()">sair</button>
+<button float-right ion-button outline (click)="logar()">logar</button> -->
+
+<form [formGroup]="formGroup">
+    <ion-item>
+        <ion-label position="stacked">Avaliação</ion-label>
+    </ion-item>
+    <ion-item>
+
+        <ion-input placeholder="*Digite um comentário" formControlName="nome" type="">
+        </ion-input>
+    </ion-item>
+    <small class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors">*Digite um comentário justificando a contestação</small>
+</form>
+
+<button float-right ion-button>VALIDAR</button>
+<button float-right ion-button outline type="submit" (click)="presentAlert()" [disabled]="formGroup.invalid">SOLICITAR AJUSTE</button>
+
+<ion-item>
+    <h5>status</h5>
+    <!-- <small [ngClass]="{
+        >css'aguardaMedico': >variavel prioridades==' >cssaguardaMedico',
+        'cancelado': prioridades=='cancelado'}"
+        >Aguarda</small> -->
+    <small [ngClass]="{
+        'aguardaMedico': prioridades=='aguardaMedico',
+        'cancelado': prioridades=='cancelado'}">Aguarda</small>
+    <strong [ngClass]="{'iniciado': nivel=='iniciado','finalizado': nivel=='finalizado'}">ANDRÉ LUIS</strong>
+</ion-item>
+
+<form action="">
+
+</form>

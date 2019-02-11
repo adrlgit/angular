@@ -1,0 +1,54 @@
+page-pagina-andre {
+    .descricaoPrioridades{
+        display: none;
+    }
+    .showDescricaoPrioridades{
+        display: block;
+    }
+    .timeline{
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $danger;
+        margin: 1px ;
+        z-index: 20;
+    }
+    .box{
+        width: 75%;
+    }
+    .timeline::before{
+        content: '';
+        margin: 5px;
+        margin-top: 35px;
+        position: absolute;
+        height: 80%;
+        width: 1px;
+        background: #5f5e5e;
+        top: 85px;
+    }
+    .forecast_container{
+        margin-top: -5px;
+        height: 10vh;
+        box-shadow: 0 5px 3px #aaa;
+        display: block;
+        overflow: scroll;
+        .item{
+            border-bottom: solid 1px #eee !important;
+            .circle{                
+                left: 0 !important;
+                top: 20px;
+            }
+        }
+    }
+    .chip-md{
+        margin: 0;
+        height: 25px;
+        background: #F1F1F1 !important;
+        line-height: 27px;
+        ion-label {
+            padding: 0 10px 0 0;
+            margin: 0;
+        }
+    }
+}

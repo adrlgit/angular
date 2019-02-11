@@ -1,0 +1,21 @@
+protocolo {
+    .danger{
+        color: $danger;
+    }
+    .blue{
+        color: $blue;
+    }
+    .aguardaMedico{
+        color: $aguardando;
+    }
+    .cancelado{
+        color: $cancelado;
+    }
+    .iniciado{
+        color: red;
+    }
+    .finalizado{
+        color: #1da15f;
+    }
+   
+}
