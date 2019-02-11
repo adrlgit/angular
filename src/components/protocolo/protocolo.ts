@@ -32,6 +32,12 @@ export class ProtocoloComponent {
     });
   }
 
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create('PopoverPage');
+    popover.present({
+      ev: myEvent
+    });
+  }
   presentAlert() {
     const alert = this.alertCtrl.create({
       title: 'Atenção',
@@ -72,8 +78,6 @@ export class ProtocoloComponent {
     alert.present();
   }
   
-
-
   ngOnInit() {
   }
 

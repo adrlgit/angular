@@ -54,11 +54,23 @@
         <ion-input placeholder="*Digite um comentário" formControlName="nome" type="">
         </ion-input>
     </ion-item>
-    <small class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors">*Digite um comentário justificando a contestação</small>
+    <small class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors">*Digite um comentário
+        justificando a contestação</small>
 </form>
 
-<button float-right ion-button>VALIDAR</button>
-<button float-right ion-button outline type="submit" (click)="presentAlert()" [disabled]="formGroup.invalid">SOLICITAR AJUSTE</button>
+<button float-right ion-button clear>VALIDAR</button>
+<button clear float-right ion-button outline type="submit" (click)="presentAlert()"
+    [disabled]="formGroup.invalid">SOLICITAR AJUSTE</button>
+
+<ion-item>
+    <ion-input type="text" placeholder="Digite um comentário"></ion-input>
+</ion-item>
+<ion-row>
+    <small color="danger">Digite um comentário justificando a contestação</small>
+</ion-row>
+
+<button float-right ion-button clear>VALIDAR</button>
+<button float-right ion-button color="light" (click)="showAlert()" clear>SOLICITAR AJUSTE</button>
 
 <ion-item>
     <h5>status</h5>
@@ -68,8 +80,16 @@
         >Aguarda</small> -->
     <small [ngClass]="{'finalizado': status=='finalizado','cancelado': status=='cancelado'}">Aguarda</small>
     <strong [ngClass]="{'iniciado': execucao=='iniciado','finalizado': execucao=='finalizado'}">ANDRÉ LUIS</strong>
+   
 </ion-item>
 
-<form action="">
+<ion-row float-right>
+    <ion-icon  name="md-more" (click)="presentPopover($event)"></ion-icon>
+</ion-row>
+  
 
-</form>
+
+ 
+  
+  
+
