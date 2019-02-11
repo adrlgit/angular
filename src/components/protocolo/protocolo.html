@@ -66,10 +66,8 @@
         >css'aguardaMedico': >variavel prioridades==' >cssaguardaMedico',
         'cancelado': prioridades=='cancelado'}"
         >Aguarda</small> -->
-    <small [ngClass]="{
-        'aguardaMedico': prioridades=='aguardaMedico',
-        'cancelado': prioridades=='cancelado'}">Aguarda</small>
-    <strong [ngClass]="{'iniciado': nivel=='iniciado','finalizado': nivel=='finalizado'}">ANDRÉ LUIS</strong>
+    <small [ngClass]="{'finalizado': status=='finalizado','cancelado': status=='cancelado'}">Aguarda</small>
+    <strong [ngClass]="{'iniciado': execucao=='iniciado','finalizado': execucao=='finalizado'}">ANDRÉ LUIS</strong>
 </ion-item>
 
 <form action="">

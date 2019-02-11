@@ -17,8 +17,9 @@ export class ProtocoloComponent {
   publica: boolean = false;
   cancela: boolean = false;
   //utilizando ng class com cores do css 
-  public prioridades = "cancelado";
-  public nivel = "finalizado";
+  public status = "finalizado";
+
+  public execucao = "iniciado";
 
   constructor(
     public formBuilder: FormBuilder,
