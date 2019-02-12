@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -8,8 +9,15 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  formGroup: FormGroup;
 
+  constructor(
+    public navCtrl: NavController,
+    public formBuilder: FormBuilder,
+    ) {
+      this.formGroup = this.formBuilder.group({
+        nome: ['',[Validators.required, Validators.minLength(1)]]
+      });
   }
 
   goToPage(){

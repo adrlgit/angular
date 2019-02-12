@@ -7,10 +7,39 @@
 </ion-header>
 
 <ion-content padding>
-  
-  <button ion-button block (click)="goToPage()">GO!</button>
-  <button ion-button color="danger" (click)="open()">!</button>
-  <ion-item>
-    <protocolo></protocolo>
-      </ion-item>
+  <form [formGroup]="formGroup">
+    <button ion-button block (click)="goToPage()">GO!</button>
+    <button ion-button color="danger" (click)="open()">!</button>
+    <ion-item>
+      <protocolo></protocolo>
+    </ion-item>
+
+    <ion-grid class="box">
+      <ion-row>
+        <h2>Programação e publicação</h2>
+      </ion-row>
+      <ion-row>
+        <p>Selecione uma data para publicar o protocolo.</p>
+      </ion-row>
+      <!-- checkbox para data -->
+
+      <ion-grid>
+        <ion-col col-12>
+          <ion-row>
+            <ion-col col-4>
+              <ion-input placeholder="Data de expiração" type="text"></ion-input>
+            </ion-col>
+            <ion-col col-4>
+              <ion-input placeholder="Data de expiração" [disabled]="formGroup.invalid" type="text"></ion-input>
+            </ion-col>
+            <ion-col col-4>
+              <ion-label>Este protocolo expira</ion-label>
+              <ion-checkbox checked="false" [(ngModel)]="pepperoni" formControlName="nome"></ion-checkbox>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-grid>
+    </ion-grid>
+  </form>
+
 </ion-content>
