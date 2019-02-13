@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
 /**
  * Generated class for the PaginaAndrePage page.
@@ -18,13 +18,7 @@ export class PaginaAndrePage {
   public dados;
  
   mostrarInformacao: boolean = true;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.dados = [
-      {nome: "Medico plus"}
-    ];
-  }
-  
+   
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaginaAndrePage');
   }

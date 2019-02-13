@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, ViewController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @IonicPage()
@@ -14,6 +14,7 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public formBuilder: FormBuilder,
+    public viewCtrl: ViewController
     ) {
       this.formGroup = this.formBuilder.group({
         nome: ['',[Validators.required, Validators.minLength(1)]]
@@ -26,4 +27,8 @@ export class HomePage {
   open(){
     this.navCtrl.push('PaginaAndrePage');
   }
+  paginaAndre(){
+    this.navCtrl.push('EnderecoSemConteudoPage');
+  }
+
 }

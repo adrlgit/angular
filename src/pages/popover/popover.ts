@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, } from 'ionic-angular';
 
 /**
  * Generated class for the PopoverPage page.
@@ -17,20 +17,19 @@ export class PopoverPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
-    public viewCtrl: ViewController
-    ) {
+    public navParams: NavParams
+    // public viewCtrl: ViewController
+) {
+  
+  }
+   // close() {
+  //   this.viewCtrl.dismiss();
+  // }
+  paginaTal(){
+    this.navCtrl.push('EnderecoSemConteudoPage');
   }
 
-  close() {
-    this.viewCtrl.dismiss();
-  }
-
-  goToPageHome(){
-    this.navCtrl.push('PaginaAndrePage');
-  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad PopoverPage');
   }
-
 }

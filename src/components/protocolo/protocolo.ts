@@ -16,10 +16,11 @@ export class ProtocoloComponent {
   aguarda: boolean = false;
   publica: boolean = false;
   cancela: boolean = false;
-  //utilizando ng class com cores do css 
-  public status = "finalizado";
 
-  public execucao = "iniciado";
+  //utilizando ng class com cores do css 
+  public aguardando = "cor1";
+  public aprovado = "cor2";
+  public concluido = "cor3";
 
   constructor(
     public formBuilder: FormBuilder,

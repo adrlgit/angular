@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core';
 import { DadosComponent } from './dados/dados';
-
 import { ProtocoloComponent } from './protocolo/protocolo';
 
-import { TesteComponent } from './teste/teste';
+
 @NgModule({
 	declarations: [
 		DadosComponent,
-
-    ProtocoloComponent,
-
-    TesteComponent
+    ProtocoloComponent
 ],
 	imports: [],
 	exports: [DadosComponent,
-    
-    ProtocoloComponent,
-  
-    TesteComponent]
+        ProtocoloComponent,
+    ]
 })
 export class ComponentsModule {}
