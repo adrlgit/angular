@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage, ViewController } from 'ionic-angular';
+import { NavController, IonicPage, ViewController, PopoverController, ModalController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PopoverComponent } from '../../components/popover/popover';
+import { ModalProtocoloComponent } from '../../components/modal-protocolo/modal-protocolo';
 
 @IonicPage()
 @Component({
@@ -14,21 +16,39 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     public formBuilder: FormBuilder,
-    public viewCtrl: ViewController
-    ) {
-      this.formGroup = this.formBuilder.group({
-        nome: ['',[Validators.required, Validators.minLength(1)]]
-      });
+    public viewCtrl: ViewController,
+    public popoverCtrl: PopoverController,
+    public modalAndre: ModalController
+
+  ) {
+    this.formGroup = this.formBuilder.group({
+      nome: ['', [Validators.required, Validators.minLength(1)]]
+    });
+  }
+  // Modal
+  modal() {
+    const modal = this.modalAndre.create('ModalPaginaTestePage');
+    modal.present();
   }
 
-  goToPage(){
+  // para declarar a pagina popover devemos importar no ts  onde é criado o evento
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverComponent);
+    popover.present({
+      ev: myEvent
+    });
+  }
+
+  goToPage() {
     this.navCtrl.push('PaginaAndrePage');
   }
-  open(){
+  open() {
     this.navCtrl.push('PaginaAndrePage');
   }
-  paginaAndre(){
+  paginaAndre() {
     this.navCtrl.push('EnderecoSemConteudoPage');
   }
-
+  tamanhoFontes() {
+    this.navCtrl.push('FontesTagsPage');
+  }
 }

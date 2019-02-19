@@ -1,24 +1,39 @@
 <form [formGroup]="formGroup">
-        <ion-item>
-            <ion-label position="stacked">Avaliação</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-input placeholder="*Digite um comentário" formControlName="nome" type="">
-            </ion-input>
-        </ion-item>
-        <small class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors">*Digite um comentário
-            justificando a contestação</small>
-    </form>
-    <button float-right ion-button clear>VALIDAR</button>
-    <button clear float-right ion-button outline type="submit" (click)="presentAlert()"
-        [disabled]="formGroup.invalid">SOLICITAR AJUSTE</button>
-    <ion-item>   
-        <small>corcss': variavel=='corcss'</small>       
-        <strong [ngClass]="{'cor1': aguardando=='cor1','cor2': aguardando == 'cor2','cor2': aguardando == 'cor2'}">AGUARDANDO-</strong>
-        <strong [ngClass]="{'cor2': aprovado=='cor2'}">APROVADO-</strong>
-        <strong [ngClass]="{'cor3': concluido == 'cor3'}">CANCELADO-</strong>
+    <ion-item>
+        <ion-label position="stacked">Avaliação</ion-label>
     </ion-item>
-    
-    <ion-row float-right>
-        <ion-icon name="md-more" (click)="presentPopover($event)"></ion-icon>
-    </ion-row>
+    <ion-item>
+        <ion-input placeholder="*Digite um comentário" formControlName="nome" type="">
+        </ion-input>
+    </ion-item>
+    <small class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors">*Digite um comentário
+        justificando a contestação</small>
+</form>
+<button float-right ion-button clear>VALIDAR</button>
+<button clear float-right ion-button outline type="submit" (click)="presentAlert()"
+    [disabled]="formGroup.invalid">SOLICITAR AJUSTE</button>
+<ion-item>
+    <small>corcss': variavel=='corcss'</small>
+    <strong
+        [ngClass]="{'cor1': aguardando=='cor1','cor2': aguardando == 'cor2','cor2': aguardando == 'cor2'}">AGUARDANDO-</strong>
+    <strong [ngClass]="{'cor2': aprovado=='cor2'}">APROVADO-</strong>
+    <strong [ngClass]="{'cor3': concluido == 'cor3'}">CANCELADO-</strong>
+</ion-item>
+
+<ion-item>
+    <ion-label>Motrar</ion-label>
+    <ion-toggle></ion-toggle>
+</ion-item>
+
+<ion-list>
+    <!-- Evento apagar nome -->
+    <ion-item class="apagado" checked="" (click)="onclick()">
+        <h2 [hidden]="meuFavorito">Brasília</h2>
+        <ion-row>
+            <h2 [hidden]="!meuFavorito">Brasília</h2>
+            <img src="../../assets/imgs/_ionicons_svg_md-trash.png">
+            <!-- <ion-icon text-left [hidden]="!meuFavorito" name="trash"></ion-icon> -->
+        </ion-row>
+    </ion-item>
+
+</ion-list>

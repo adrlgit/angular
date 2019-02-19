@@ -6,10 +6,11 @@ import { ProtocoloComponent } from '../../components/protocolo/protocolo';
 @NgModule({
   declarations: [
     HomePage,
-    ProtocoloComponent
+    ProtocoloComponent,
   ],
   imports: [
     IonicPageModule.forChild(HomePage),
+
   ],
 })
 export class HomeModule { }

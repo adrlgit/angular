@@ -11,11 +11,14 @@ export class ProtocoloComponent {
   formGroup: FormGroup;
 
   cursos: string[] = [];
+ 
   mostrarCursos: boolean = false;
   validacao: boolean = false;
   aguarda: boolean = false;
   publica: boolean = false;
   cancela: boolean = false;
+  exclui: boolean = false;
+  meuFavorito: boolean = false;
 
   //utilizando ng class com cores do css 
   public aguardando = "cor1";
@@ -91,5 +94,13 @@ export class ProtocoloComponent {
   }
   logar() {
     this.validacao = !this.validacao;
+  }
+
+  excluir() {
+    this.exclui = !this.exclui;
+  }
+
+  onclick(){
+    this.meuFavorito = !this.meuFavorito;
   }
 }

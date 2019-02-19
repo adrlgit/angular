@@ -6,10 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { PopoverComponent } from '../components/popover/popover';
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    PopoverComponent
   ],
   providers: [
     StatusBar,

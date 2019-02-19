@@ -1,20 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-     Home
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-
   <button ion-button block (click)="paginaAndre()">GO!</button>
-  
+  <button ion-button block outline (click)="tamanhoFontes()">GO!</button>
   <ion-item>
     <!-- COMPONENTE -->
     <protocolo></protocolo>
   </ion-item>
-
-  <ion-icon name="home" (click)="presentPopover($event)"></ion-icon>
-
+  <!-- popover component -->
+  <h2>Popover</h2>
+  <ion-icon name="more" (click)="presentPopover($event)"></ion-icon>
+   <!-- Modal componente -->
+   <h2>Modal</h2>
+   <ion-icon name="more" (click)="modal()"></ion-icon>
 </ion-content>
