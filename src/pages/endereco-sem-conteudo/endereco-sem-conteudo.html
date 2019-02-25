@@ -1,10 +1,143 @@
-
 <ion-header>
   <ion-navbar>
-    <ion-title>endereco-sem-conteudo</ion-title>
+    <ion-row>
+      <ion-col class="titulo">
+        <ion-title>endereco-sem-conteudo</ion-title>
+      </ion-col>
+      <ion-col text-right>
+        <button (click)="filtroShow()" ion-button icon-only clear>
+          <span class="notificacao">2</span>
+          <ion-icon color="light" name="notifications"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-col *ngIf="filtro" class="filtro">
+    <br>
+    <label>Notificações</label>
+    <ion-col col-12>
+      <ion-item *ngFor="let item of [1,2]">
+        <ion-row>
+          <ion-col col-1>
+            <ion-icon class="icone" name="ios-list-outline"></ion-icon>
+          </ion-col>
+          <ion-col text-left col-11>
+            <small class="icone">Elaboração/Validação de Protocolos</small>
+            <h5>Uma nova validação foi atribuída a você.</h5>
+            <span></span>
+            <span></span>
+            <small class="titulo">Nome do protocolo</small>
+            <h1>Catarata Senil</h1>
+            <span></span>
+            <span></span>
+            <h5>Dra. Amanda Alves</h5>
+            <small class="titulo">Perícia médica</small>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-col>
+    <!-- chat -->
+    <ion-col>
+      <ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-icon class="icone" name="md-chatboxes"></ion-icon>
+          </ion-col>
+          <ion-col>
 
-</ion-content>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-col>
+    <!-- agendamento -->
+    <ion-col>
+       <ion-item>
+         <ion-row>
+           <ion-col>
+             <ion-icon class="icone" name="md-calendar"></ion-icon>
+           </ion-col>
+           <ion-col>
+   
+           </ion-col>
+         </ion-row>
+       </ion-item>
+     </ion-col>
+   </ion-col>
+
+
+  <!-- <button ion-fab>
+    <ion-icon name="add"></ion-icon>
+  </button>
+<ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <h5 color="primary">06</h5>
+        <p>DEZ</p>
+        <p>2018</p>
+      </ion-col>
+      <ion-col push-8 col-2>
+        <p  text-right><strong>Identificação</strong></p>
+        <p text-right color="primary">Dados protocolo</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col push-2 col-10>
+        <ion-list >
+          <ion-item>
+            <p>andre</p>
+            <p>andre</p>
+            <p>andre</p>
+            <p>andre</p>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col text-center col-1>
+        <h5>06</h5>
+        <p>DEZ</p>
+        <p>2018</p>
+      </ion-col>
+      <ion-col col-11>
+        <ion-row>
+          <ion-col col-12>
+            <ion-col col-2>
+              <h6 text-right color="primary">Dados protocolok</h6>
+              <p text-right color="primary">Dados protocolok</p>
+            </ion-col>
+            <ion-col col-1>
+              <ion-icon (click)="show()" name="ios-arrow-down"></ion-icon>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="prioridade">
+      <ion-col push-1 col-11>
+        <ion-list>
+          <ion-row>
+            <ion-col class="colunaSegunda" col-11>
+              <ion-label>
+                <span class="notificacao"></span>
+                <label>PRIORIDADE 2 - Vermelho</label>
+              </ion-label>
+              <strong *ngIf="prioridade2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, esse. Aut nobis exercitationem
+                minima odio aspernatur animi, amet nesciunt? Cumque at ex, a est ipsum rerum? In quo enim placeat!
+              </strong>
+            </ion-col>
+            <ion-col col-1 text-center>
+              <ion-icon (click)="show2()" name="ios-arrow-down"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content> 

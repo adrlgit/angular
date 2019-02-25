@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage, ViewController, PopoverController, ModalController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PopoverComponent } from '../../components/popover/popover';
-import { ModalProtocoloComponent } from '../../components/modal-protocolo/modal-protocolo';
+// import { ModalProtocoloComponent } from '../../components/modal-protocolo/modal-protocolo';
 
 @IonicPage()
 @Component({
@@ -50,5 +50,8 @@ export class HomePage {
   }
   tamanhoFontes() {
     this.navCtrl.push('FontesTagsPage');
+  }
+  log(){
+    this.navCtrl.push('LoginPage');
   }
 }

@@ -7,26 +7,32 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { PopoverComponent } from '../components/popover/popover';
+// import { ModalNotificaComponent } from '../components/modal-notifica/modal-notifica';
 
 @NgModule({
   declarations: [
     MyApp,
-    PopoverComponent
+    PopoverComponent,
+    // ModalNotificaComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FormsModule
+    FormsModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    PopoverComponent
+    PopoverComponent,
+    // ModalNotificaComponent
+
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

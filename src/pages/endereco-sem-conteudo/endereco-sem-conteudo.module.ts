@@ -6,8 +6,10 @@ import { EnderecoSemConteudoPage } from './endereco-sem-conteudo';
   declarations: [
     EnderecoSemConteudoPage,
   ],
+  entryComponents: [
+  ],
   imports: [
     IonicPageModule.forChild(EnderecoSemConteudoPage),
   ],
 })
-export class EnderecoSemConteudoPageModule {}
+export class EnderecoSemConteudoPageModule { }

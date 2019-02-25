@@ -8,13 +8,14 @@
 <ion-content padding>
   <button ion-button block (click)="paginaAndre()">GO!</button>
   <button ion-button block outline (click)="tamanhoFontes()">GO!</button>
+  <button ion-button block outline (click)="log()">login!</button>
   <ion-item>
     <!-- COMPONENTE -->
     <protocolo></protocolo>
   </ion-item>
   <!-- popover component -->
   <h2>Popover</h2>
-  <ion-icon name="more" (click)="presentPopover($event)"></ion-icon>
+  <ion-icon name="more" (click)="presentPopover($popover-md-box-shadow)"></ion-icon>
    <!-- Modal componente -->
    <h2>Modal</h2>
    <ion-icon name="more" (click)="modal()"></ion-icon>
