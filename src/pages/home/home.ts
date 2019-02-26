@@ -54,4 +54,7 @@ export class HomePage {
   log(){
     this.navCtrl.push('LoginPage');
   }
+  public irParecer(){
+    this.navCtrl.push('ConsultaPage')
+  }
 }

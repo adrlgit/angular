@@ -1,0 +1,49 @@
+page-consulta {
+    .toolbar-background-md {
+        background: #21B399;
+        border: transparent;
+    }
+            .toolbar-md {
+                padding: 4px;
+                min-height: 156px;
+            }
+      .titulo{
+        margin-top: -68px;
+    }
+    .plus{
+        // position: left;
+        top: 28px;
+        left: 910px;
+    }
+    ion-header {
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        background-color: #21b399;
+    }
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        width: 0;
+        height:0;
+    }
+    .box{
+        width: 70%;
+    }
+    .forecast_container{
+        margin-top: 50px;
+        height: 82vh;
+        box-shadow: 0 5px 3px #aaa;
+        display: block;
+        // overflow: scroll;
+        .item{
+            border-bottom: solid 1px #eee !important;
+            .circle{                
+                left: 0 !important;
+                top: 20px;
+            }
+        }
+    }
+
+}

@@ -50,5 +50,21 @@ page-endereco-sem-conteudo {
       .icone{
           color: #21B399;
       }
-    
+      .box{
+        width: 70%;
+    }
+    .forecast_container{
+        margin-top: 50px;
+        height: 82vh;
+        box-shadow: 0 5px 3px #aaa;
+        display: block;
+        // overflow: scroll;
+        .item{
+            border-bottom: solid 1px #eee !important;
+            .circle{                
+                left: 0 !important;
+                top: 20px;
+            }
+        }
+    }
 }

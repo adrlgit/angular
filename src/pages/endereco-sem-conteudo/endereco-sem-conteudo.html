@@ -54,19 +54,108 @@
     </ion-col>
     <!-- agendamento -->
     <ion-col>
-       <ion-item>
-         <ion-row>
-           <ion-col>
-             <ion-icon class="icone" name="md-calendar"></ion-icon>
-           </ion-col>
-           <ion-col>
-   
-           </ion-col>
-         </ion-row>
-       </ion-item>
-     </ion-col>
-   </ion-col>
+      <ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-icon class="icone" name="md-calendar"></ion-icon>
+          </ion-col>
+          <ion-col>
 
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-col>
+  </ion-col>
+  <ion-content>
+    <ion-grid class="box forecast_container">
+      <h2 class="tituloPadrao">Dados do Parecer</h2>
+      <ion-row>
+        <ion-col>
+          <small class="tituloCinza">Título da perícia</small>
+          <p>
+            Adaptação de horário de trabalho
+          </p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <small class="tituloCinza">Base legal</small>
+          <p>
+            Artigo 83 da Lei nº 8.112/90
+          </p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <small class="tituloCinza">Motivo da consulta pericial</small>
+          <p>
+            Licença por motivo de doença em pessoa da família
+          </p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <small class="tituloCinza">Tipo de perícia</small>
+        </ion-col>
+      </ion-row>
+      <ion-list>
+        <ion-row>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label>Administrativa</ion-label>
+              <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label>Previdenciária</ion-label>
+              <ion-checkbox [(ngModel)]="sausage" disabled="true"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label>Trabalhista</ion-label>
+              <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+      <ion-row>
+        <ion-col>
+          <small class="tituloCinza">Modalidade</small>
+        </ion-col>
+      </ion-row>
+      <ion-list>
+        <ion-row>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label>Singular</ion-label>
+              <ion-checkbox [(ngModel)]="mod"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label>Junta</ion-label>
+              <ion-checkbox [(ngModel)]="buiu" disabled="true"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-grid>
+    <ion-grid class="box forecast_container">
+      <ion-row>
+        <ion-col col-1>
+          <ion-icon name="document"></ion-icon>
+        </ion-col>
+        <ion-col col-11>
+          <small class="tituloPadrao">Quesitos</small>
+          <p>
+           Cadastre-se
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
 
   <!-- <button ion-fab>
     <ion-icon name="add"></ion-icon>
@@ -140,4 +229,4 @@
       </ion-col>
     </ion-row>
   </ion-grid> -->
-</ion-content> 
+</ion-content>
