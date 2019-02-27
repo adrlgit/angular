@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ConsultaPage {
 
+  public filtro = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,5 +25,11 @@ export class ConsultaPage {
   }
   paginaAndre(){
     this.navCtrl.push('EnderecoSemConteudoPage');
+  }
+  public Filtro(){
+    this.filtro = true;
+  }
+  public close(){
+    this.filtro = false;
   }
 }
