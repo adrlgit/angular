@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>parecer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row class="box2 boxPorcentagem2">
+    pklczljlkzxdm
+  </ion-row>
+  <ion-row>
+    <ion-grid class="box boxPorcentagem">
+      <p>Nome da Sessão</p>
+      <ion-row>
+        <ion-col>
+          <p>Quesito 1</p>
+        </ion-col>
+        <ion-col text-right>
+          <ion-icon name="bookmark"></ion-icon>
+        </ion-col>
+        <ion-col col-1 text-right>
+          <ion-icon name="more"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label>Titulo</ion-label>
+            <ion-input type=""></ion-input>
+          </ion-item>
+          <ion-list>
+            <ion-row>
+              <ion-col col-8>
+                <ion-item *ngIf="showOpcao" [hidden]="a">
+                  <ion-label>Opção 1</ion-label>
+                  <ion-checkbox
+                    (click)="exibeCheckSim()"
+                    slot="end"
+                    value="pepperoni"
+                  ></ion-checkbox>
+                </ion-item>
+              </ion-col>
+              <ion-col class="col2" col-2>
+                <ion-item *ngIf="showOpcao" [hidden]="a">
+                  <ion-label (click)="exibeOpcao()"
+                    ><strong>x</strong></ion-label
+                  >
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-item *ngIf="opcaoSim" [hidden]="!a">
+              <ion-label>Sim</ion-label>
+              <ion-checkbox slot="end" value="pepperoni"></ion-checkbox>
+            </ion-item>
+            <ion-item *ngIf="opcaoNao">
+              <ion-label>Não</ion-label>
+              <ion-checkbox slot="end" value="pepperoni"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+          <p (click)="exibeCheckNao()" *ngIf="showOpcao">ADICONAR OPÇÃO</p>
+          <ion-item>
+            <ion-label>Quesito obrigatório</ion-label>
+            <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label>Tipo de resposta</ion-label>
+            <ion-select
+              (click)="exibeOpcao()"
+              [(ngModel)]="toppings"
+              multiple="false"
+            >
+              <ion-option>Texto</ion-option>
+              <ion-option>Seleção única</ion-option>
+              <ion-option>Seleção múltipla</ion-option>
+              <ion-option>Anexar arquivo</ion-option>
+              <ion-option>Data</ion-option>
+              <ion-option>Hora</ion-option>
+            </ion-select>
+          </ion-item>
+          <!-- Checkbox Sim -->
+          <ion-item *ngIf="opcaoSim" [hidden]="!a">
+            <ion-label>Selecionar condicional</ion-label>
+            <ion-select [(ngModel)]="a" multiple="false">
+              <ion-option>Proceguir para sessão</ion-option>
+              <ion-option>Teste1</ion-option>
+              <ion-option>Teste2</ion-option>
+            </ion-select>
+          </ion-item>
+          <!-- Checkbox Não -->
+          <ion-item *ngIf="opcaoNao">
+            <ion-label>Selecionar condicional</ion-label>
+            <ion-select [(ngModel)]="b" multiple="false">
+              <ion-option>Proceguir para sessão</ion-option>
+              <ion-option>Teste1</ion-option>
+              <ion-option>Teste2</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-row>
+  <br />
+  <ion-row>
+    <ion-grid class="box boxPorcentagem">
+      2
+    </ion-grid>
+  </ion-row>
+</ion-content>

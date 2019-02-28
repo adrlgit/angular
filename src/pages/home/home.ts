@@ -57,4 +57,7 @@ export class HomePage {
   public irParecer(){
     this.navCtrl.push('ConsultaPage')
   }
+  public novoParecer() {
+    this.navCtrl.push("ParecerPage");
+  }
 }
