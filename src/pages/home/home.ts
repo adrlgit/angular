@@ -60,4 +60,7 @@ export class HomePage {
   public novoParecer() {
     this.navCtrl.push("ParecerPage");
   }
+  lista() {
+    this.navCtrl.push('ListaPage');
+  }
 }

@@ -1,0 +1,20 @@
+<!--
+  Generated template for the ListaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>lista</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    <ion-item (click)="irPaginaListada(item)" *ngFor="let item of listas" >
+      <h2>{{ item.nome }}</h2>
+      <p>{{ item.sobrenome }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
