@@ -29,6 +29,20 @@ export class ListaPage {
       sobrenome: "Martins"
     }
   ];
+  public lista2 = [
+    {
+      carro: "celta",
+      marca: "GM"
+    },
+    {
+      carro: "Onix",
+      marca: "Chevrollet"
+    },
+    {
+      carro: "Camaro",
+      marca: "Chev"
+    },
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
@@ -36,5 +50,8 @@ export class ListaPage {
   }
   irPaginaListada(item) {
     this.navCtrl.push("PaginaListadaPage", { item });
+  }
+  irPageSeguinte(variavel) {
+    this.navCtrl.push("TabelaCarPage", { variavel })
   }
 }

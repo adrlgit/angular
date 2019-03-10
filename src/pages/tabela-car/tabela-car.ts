@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PaginaListadaPage page.
+ * Generated class for the TabelaCarPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,17 +10,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-pagina-listada',
-  templateUrl: 'pagina-listada.html',
+  selector: 'page-tabela-car',
+  templateUrl: 'tabela-car.html',
 })
-export class PaginaListadaPage {
-  public a;
+export class TabelaCarPage {
+  public qualquer;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.a = navParams.get("item");
+    this.qualquer = navParams.get("variavel");
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PaginaListadaPage');
+    console.log('ionViewDidLoad TabelaCarPage');
   }
 
 }
