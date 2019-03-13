@@ -10,14 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
+
   selector: 'page-consulta',
   templateUrl: 'consulta.html',
+
 })
 export class ConsultaPage {
 
   public filtro = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {

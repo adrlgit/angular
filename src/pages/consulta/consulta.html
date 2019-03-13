@@ -12,14 +12,20 @@
 <ion-content>
   <ion-grid class="box">
     <ion-row class="row-filter">
-
       <ion-col col-11>
         <ion-item>
           <ion-label floating>
             Pesquisar
           </ion-label>
           <ion-input id="inputPesquisa" type="text"></ion-input>
-          <button ion-button item-right color='padrao' padding class='btn-mic' name="mic">
+          <button
+            ion-button
+            item-right
+            color="padrao"
+            padding
+            class="btn-mic"
+            name="mic"
+          >
             <ion-icon class="mic" name="mic"></ion-icon>
           </button>
         </ion-item>
@@ -28,16 +34,21 @@
         <ion-icon name="md-funnel"></ion-icon>
       </ion-col>
       <ion-col *ngIf="filtro" class="filter">
-        <small padding>Filtros</small><br>
+        <small padding>Filtros</small><br />
         <p padding>Motivo da consulta pericial</p>
         <ion-row>
-          <ion-row>
-          </ion-row>
+          <ion-row> </ion-row>
           <ion-item class="status">
             <ion-label>Motivo de consulta</ion-label>
-            <ion-select interface='popover' aria-placeholder="Motivo de consulta" [(ngModel)]="status" class="status">
+            <ion-select
+              interface="popover"
+              aria-placeholder="Motivo de consulta"
+              [(ngModel)]="status"
+              class="status"
+            >
               <ion-option value="1">Em validação</ion-option>
-              <ion-option value="2">Requer Ajustes</ion-option>
+
+              <ion-option value="2">Requer Ajustes </ion-option>
               <ion-option value="3">Aguardando aprovação</ion-option>
               <ion-option value="4">Aguardando publicação</ion-option>
               <ion-option value="5">Encerrado</ion-option>
@@ -48,6 +59,7 @@
           <ion-col col-12>
             <p padding>Modalidade</p>
           </ion-col>
+
           <ion-col>
             <ion-item>
               <ion-label>Ativo</ion-label>
@@ -69,13 +81,25 @@
         </ion-row>
         <ion-row class="rowButtons" text-center>
           <ion-col col-4>
-            <a id="redefine" ion-text color="danger" small text-uppercase><small>limpar</small></a>
+            <a id="redefine" ion-text color="danger" small text-uppercase
+              ><small>limpar</small></a
+            >
           </ion-col>
           <ion-col col-4>
-            <a id="cancela" ion-text (tap)="close()" color="cinza" small text-uppercase><small>cancelar</small> </a>
+            <a
+              id="cancela"
+              ion-text
+              (tap)="close()"
+              color="cinza"
+              small
+              text-uppercase
+              ><small>cancelar</small>
+            </a>
           </ion-col>
           <ion-col col-4>
-            <a id="aplica" ion-text color="primary" small text-uppercase><small (tap)="close()">aplicar</small></a>
+            <a id="aplica" ion-text color="primary" small text-uppercase
+              ><small (tap)="close()">aplicar</small></a
+            >
           </ion-col>
         </ion-row>
       </ion-col>
@@ -86,7 +110,7 @@
       <ion-icon end name="add"></ion-icon>
     </button> -->
   <ion-fab bottom right fixed margin-bottom>
-    <button (click)="solicitacao()" ion-fab color='danger'>
+    <button (click)="solicitacao()" ion-fab color="danger">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
