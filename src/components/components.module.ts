@@ -3,12 +3,14 @@ import { DadosComponent } from './dados/dados';
 import { ProtocoloComponent } from './protocolo/protocolo';
 import { PopoverComponent } from './popover/popover';
 import { ModalProtocoloComponent } from './modal-protocolo/modal-protocolo';
+import { ModalConsultaComponent } from './modal-consulta/modal-consulta';
 
 @NgModule({
     declarations: [
         DadosComponent,
         ProtocoloComponent,
-        PopoverComponent
+        PopoverComponent,
+    ModalConsultaComponent
     ],
     entryComponents: [
     ],
@@ -16,7 +18,8 @@ import { ModalProtocoloComponent } from './modal-protocolo/modal-protocolo';
     ],
     exports: [DadosComponent,
         ProtocoloComponent,
-        PopoverComponent
+        PopoverComponent,
+    ModalConsultaComponent
     ]
 })
 export class ComponentsModule { }
