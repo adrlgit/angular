@@ -1,4 +1,23 @@
-<!-- Generated template for the ModalConsultaComponent component -->
-<div>
-  {{text}}
-</div>
+<ion-content padding>
+  <ion-grid class="box">
+    <ion-row>
+      <ion-col offset-1 col-1>
+        <ion-icon color="danger" name="alert"></ion-icon>    
+      </ion-col>
+      <ion-col col-10>
+          <h5>Esta pesquisa será excluida definitivamente</h5>
+        <p>Lore</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-buttons end>
+            <button ion-button clear uppercase item-lef>sim</button>
+            <button ion-button clear uppercase (click)="dismiss()">não</button>
+          </ion-buttons>
+        </ion-item>
+      </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ModalConsultaComponent component.
@@ -14,9 +15,13 @@ export class ModalConsultaComponent {
 
   text: string;
 
-  constructor() {
+  constructor(
+    public viewCtrl: ViewController,
+  ) {
     console.log('Hello ModalConsultaComponent Component');
     this.text = 'Hello World';
   }
-
+  dismiss(){
+    this.viewCtrl.dismiss();
+  }
 }

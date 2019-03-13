@@ -7,24 +7,27 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { PopoverComponent } from '../components/popover/popover';
+import { ModalConsultaComponent } from '../components/modal-consulta/modal-consulta';
 // import { ModalNotificaComponent } from '../components/modal-notifica/modal-notifica';
 
 @NgModule({
   declarations: [
     MyApp,
     PopoverComponent,
+    ModalConsultaComponent,
     // ModalNotificaComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FormsModule,
+    FormsModule
 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     PopoverComponent,
+    ModalConsultaComponent,
     // ModalNotificaComponent
 
 

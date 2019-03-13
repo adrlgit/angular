@@ -63,4 +63,7 @@ export class HomePage {
   lista() {
     this.navCtrl.push('ListaPage');
   }
+  pageCheck(){
+    this.navCtrl.push('ModalCheckPage');
+  }
 }
